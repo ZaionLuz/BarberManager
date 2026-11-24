@@ -1,31 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml"
-      alignment="CENTER"
-      spacing="20"
-      style="-fx-background-color: #171717;">
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.barbermanager.controller.MainController"
+           style="-fx-background-color: #121212;">
 
-    <Label
-            text="BARBERMANAGER"
-            style="-fx-font-size: 36px;
-               -fx-font-weight: bold;
-               -fx-text-fill: #D4A54C;" />
+    <VBox alignment="CENTER"
+          spacing="18"
+          maxWidth="520"
+          maxHeight="340"
+          style="-fx-background-color: #181818;
+                 -fx-border-color: #2C2C2C;
+                 -fx-border-width: 1;
+                 -fx-border-radius: 12;
+                 -fx-background-radius: 12;">
+        <padding>
+            <Insets top="42" right="44" bottom="42" left="44"/>
+        </padding>
 
-    <Label
-            text="Sistema de Gerenciamento de Barbearia"
-            style="-fx-font-size: 17px;
-               -fx-text-fill: white;" />
+        <Label text="GESTÃO PROFISSIONAL"
+               style="-fx-font-size: 11px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #D4A54C;"/>
 
-    <Button
-            text="Começar"
-            style="-fx-background-color: #D4A54C;
-               -fx-text-fill: #171717;
-               -fx-font-size: 15px;
-               -fx-font-weight: bold;
-               -fx-padding: 12 32;" />
+        <Label text="BARBERMANAGER"
+               style="-fx-font-size: 34px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #F5F5F5;"/>
 
-</VBox>
+        <Region prefHeight="2" maxWidth="80"
+                style="-fx-background-color: #D4A54C;"/>
+
+        <Label text="Controle de clientes, barbeiros, serviços e agendamentos em um só lugar."
+               wrapText="true"
+               textAlignment="CENTER"
+               style="-fx-font-size: 14px;
+                      -fx-text-fill: #A3A3A3;"/>
+
+        <Button text="Acessar Sistema"
+                onAction="#abrirDashboard"
+                style="-fx-background-color: #D4A54C;
+                       -fx-text-fill: #141414;
+                       -fx-font-size: 14px;
+                       -fx-font-weight: bold;
+                       -fx-padding: 12 38;
+                       -fx-background-radius: 8;
+                       -fx-cursor: hand;">
+            <VBox.margin>
+                <Insets top="8"/>
+            </VBox.margin>
+        </Button>
+    </VBox>
+
+</StackPane>
